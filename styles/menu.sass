@@ -1,0 +1,120 @@
+@import variables
+
+$bar: #FFD9A1
+$wine: #FFA6A6
+$craft: #B2DBC0
+
+.selected
+  margin-top: 35px
+  &.bar, .bar
+    background-color: darken($bar, 20%) !important
+  &.wine, .wine
+    background-color: darken($wine, 20%) !important
+  &.craft, .craft
+    background-color: darken($craft, 20%) !important
+  .icon__description
+    background-color: #141414 !important
+
+  .here
+    display: block !important
+  .there
+    display: none !important
+
+
+.menu
+  width: 90%
+  margin: 60px auto $box-margin
+  margin-top: 60px
+
+  .menu__title
+    text-align: center
+    padding: 15px
+    letter-spacing: .1em
+    margin-bottom: 10px
+
+  .menu__icons
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+
+
+
+    article
+
+      margin-left: 10px
+      margin-right: 10px
+      height: 300px
+      width: 70vw
+      max-width: 300px
+      min-width: 200px
+      transition: all .3s ease-out
+
+
+
+      a
+        display: flex
+        transition: all .2s ease-in
+        height: 80%
+        width: 100%
+        margin: 0 auto
+        align-items: center
+        justify-content: center
+        img
+          height: 80%
+          width: 80%
+
+      .bar
+        background-color: $bar
+      .wine
+        background-color: $wine
+      .craft
+        background-color: $craft
+
+
+
+      .icon__description
+        height: 19%
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        background-color: #5E5E5E
+        color: #F7F7F7
+        font-size: 1.1em
+        letter-spacing: .1em
+        margin: 0 auto
+
+.menu__mobile
+  position: fixed
+  display: none
+  width: 100%
+  height: 80px
+  background-color: #fff
+  top: 0
+  left: 0
+  z-index: 5
+  cursor: pointer
+  user-select: none
+  span
+    padding: 10px
+  .there
+    display: block
+  .here
+    display: none
+
+  ul
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 100%
+
+
+  ul li
+    flex: 1 0 30%
+    margin-top: 0
+    text-align: center
+    height: 100%

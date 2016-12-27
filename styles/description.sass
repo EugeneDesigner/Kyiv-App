@@ -1,0 +1,94 @@
+@import variables
+
+@keyframes ShadowUpDown
+  0
+    box-shadow: 0px 0px 2px 2px rgba(#7f7f7f, .8)
+  50%
+    box-shadow: 0px 1px 2px 2px rgba(#000000, .8)
+  100%
+    box-shadow: 0px 0px 2px 2px rgba(#7f7f7f, .8)
+
+@keyframes Bounce
+	0%, 20%, 50%, 80%, 100%
+    transform: translateY(0)
+	40%
+    transform: translateY(-15px)
+
+	60%
+    transform: translateY(-5px)
+
+
+
+.description
+  margin: $box-margin auto
+  width: 98%
+  padding-top: 80px
+
+
+
+  h3
+    text-align: center
+    letter-spacing: .1em
+    display: block
+    padding: 30px
+    border: 2px solid black
+    box-shadow: 4px 4px 3px 0px rgba(0,0,0, .1)
+  ul
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    margin-top: 90px
+    a, span
+      display: none
+
+    .highlight
+      box-shadow: 0px 0px 2px 2px rgba(#7f7f7f, .8)
+      animation: ShadowUpDown 1s ease-in-out infinite
+      .icons
+        display: flex
+        flex-direction: row nowrap
+      a, .marker
+        display: inline-block
+        text-decoration: none
+        margin: 10px 2px 2px
+        padding: 5px 5px 0
+        transition: all .1s ease-in-out
+        color: #000
+      .marker:hover
+          animation: Bounce 2s infinite
+      a
+        border-bottom: 1px solid black
+        text-align: center
+        &:active, &:focus
+            color: #000
+            box-shadow: 0px 0px 0px 0px rgba(#7f7f7f, .8)
+        &:hover
+            box-shadow: 1px -2px 2px 2px rgba(#7f7f7f, .8)
+            margin-bottom: -2px
+
+    li
+      cursor: pointer
+      box-sizing: border-box
+      width: 100%
+      max-width: 350px
+      min-width: 300px
+      margin-bottom: 4em
+      padding: 10px
+      text-align: center
+      position: relative
+
+
+      &:hover
+        box-shadow: 0px 0px 2px 2px rgba(#7f7f7f, .8)
+
+
+      h4
+        padding: 10px 5px .8em 18px
+        font-weight: bold
+        text-align: left
+      p
+        display: inline-block
+        width: 90%
+        line-height: 1.5em
+        letter-spacing: .04em
+        text-align: justify

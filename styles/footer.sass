@@ -1,0 +1,38 @@
+@keyframes MoveUpDown
+  0%
+    margin-top: 0px
+  50%
+    margin-top: 5px
+  100%
+    margin-top: 0px
+
+footer
+  display: flex
+  height: 80px
+  padding: 2px 15px
+  background-color: #F9F9F9
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
+
+  div:first-child
+    flex: 2 0 40%
+
+  .footer__icons
+    width: 80px
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    justify-content: space-between
+
+
+    a
+      display: block
+
+      padding: 2px
+      height: 20px
+      width: 20px
+
+      &:hover > img
+        cursor: pointer
+        animation: MoveUpDown 1s ease-in-out infinite
